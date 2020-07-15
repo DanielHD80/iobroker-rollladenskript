@@ -1,0 +1,1431 @@
+BlocklyJavascriptTypeScript
+Protokoll
+Ausgewählte Blöcke exportieren
+
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <variables>
+    <variable id="hHfoX~Hx3by}mzpH{{:6">Ist</variable>
+    <variable id="2siPmyNP6bojOa0qJgx:">Diff</variable>
+    <variable id="B3I%l;MLd,1,G4r]XAv)">Verzögerung</variable>
+    <variable id="rGohx9/zadfRb*=lO(I9">value</variable>
+  </variables>
+  <block type="on" id="WFm[}xjn6.JW~ZQ|nKk9" x="-412" y="-437">
+    <field name="OID">0_userdata.0.Wohnzimmer.Rollladen.SOLL</field>
+    <field name="CONDITION">ne</field>
+    <field name="ACK_CONDITION"></field>
+    <statement name="STATEMENT">
+      <block type="controls_if" id="53Fn4aWlfLNumsd5?Ul-">
+        <mutation elseif="1" else="1"></mutation>
+        <value name="IF0">
+          <block type="logic_compare" id="pqOfnzXhzDWT6{jlv~O~">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="get_value" id=")|Qkp2ps|+S:I$yVsL]o">
+                <field name="ATTR">val</field>
+                <field name="OID">0_userdata.0.Wohnzimmer.Rollladen.SOLL</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="math_number" id="fY.%6HRJ!=)aZc,fbZ6g">
+                <field name="NUM">100</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="control_ex" id="{10T[:8I{s_?m=(!x6Ze">
+            <field name="TYPE">true</field>
+            <field name="CLEAR_RUNNING">TRUE</field>
+            <value name="OID">
+              <shadow type="field_oid" id="CT]muU3kt,[gu0~SW2Y2">
+                <field name="oid">0_userdata.0.Wohnzimmer.Rollladen.working_up</field>
+              </shadow>
+            </value>
+            <value name="VALUE">
+              <shadow type="logic_boolean" id="d;[Z20[wX;rOq7~lBf}P">
+                <field name="BOOL">TRUE</field>
+              </shadow>
+            </value>
+            <value name="DELAY_MS">
+              <shadow type="math_number" id="6pK-^Jq88EAq9?BoZ!0J">
+                <field name="NUM">0</field>
+              </shadow>
+            </value>
+            <next>
+              <block type="control_ex" id="6No~iixw,isyXdE,o5.c">
+                <field name="TYPE">true</field>
+                <field name="CLEAR_RUNNING">FALSE</field>
+                <value name="OID">
+                  <shadow type="field_oid" id="08-4xQ-4|i{L3Z%@]Atg">
+                    <field name="oid">0_userdata.0.Wohnzimmer.Rollladen.working_up</field>
+                  </shadow>
+                </value>
+                <value name="VALUE">
+                  <shadow type="logic_boolean" id="c(@V@f;;1wFsUUD!m142">
+                    <field name="BOOL">FALSE</field>
+                  </shadow>
+                </value>
+                <value name="DELAY_MS">
+                  <shadow type="math_number">
+                    <field name="NUM">0</field>
+                  </shadow>
+                  <block type="math_arithmetic" id="[p6$)Yl6(pqh:jj3hcXR">
+                    <field name="OP">ADD</field>
+                    <value name="A">
+                      <shadow type="math_number">
+                        <field name="NUM">1</field>
+                      </shadow>
+                      <block type="math_arithmetic" id="yP{J`E/431CRVE#pl,N9">
+                        <field name="OP">MULTIPLY</field>
+                        <value name="A">
+                          <shadow type="math_number">
+                            <field name="NUM">1</field>
+                          </shadow>
+                          <block type="get_value" id="h[%x~:,SelQf^H)pylBD">
+                            <field name="ATTR">val</field>
+                            <field name="OID">0_userdata.0.Wohnzimmer.Rollladen.Laufzeit_hoch</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <shadow type="math_number" id="G?N_Qwu(E)gd9ZNy74(V">
+                            <field name="NUM">100</field>
+                          </shadow>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <shadow type="math_number" id="dMoU9t:mfU;snry!,H(7">
+                        <field name="NUM">1000</field>
+                      </shadow>
+                    </value>
+                  </block>
+                </value>
+                <next>
+                  <block type="control" id="()3I;WZ3066m%Xv*92w5">
+                    <mutation xmlns="http://www.w3.org/1999/xhtml" delay_input="false"></mutation>
+                    <field name="OID">0_userdata.0.Wohnzimmer.Rollladen.IST</field>
+                    <field name="WITH_DELAY">FALSE</field>
+                    <value name="VALUE">
+                      <block type="math_number" id="CW3T~{`1MZ=[^8RrP,Y]">
+                        <field name="NUM">100</field>
+                      </block>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <value name="IF1">
+          <block type="logic_compare" id="%`RtXec:I^n?76BdQO=N">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="get_value" id="@R5O9zjmB0:wLVuy!r?/">
+                <field name="ATTR">val</field>
+                <field name="OID">0_userdata.0.Wohnzimmer.Rollladen.SOLL</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="math_number" id="*txKOQ3pZp23hr1FB~@(">
+                <field name="NUM">0</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO1">
+          <block type="control_ex" id="R=p@M@Ap4GM9J7zY%GG^">
+            <field name="TYPE">true</field>
+            <field name="CLEAR_RUNNING">TRUE</field>
+            <value name="OID">
+              <shadow type="field_oid" id="q)%HcmW@cWfLt-ssDqY.">
+                <field name="oid">0_userdata.0.Wohnzimmer.Rollladen.working_down</field>
+              </shadow>
+            </value>
+            <value name="VALUE">
+              <shadow type="logic_boolean" id="O1eAOK*I|RK_AD_]ZA:9">
+                <field name="BOOL">TRUE</field>
+              </shadow>
+            </value>
+            <value name="DELAY_MS">
+              <shadow type="math_number" id="J9Tyml^Xdml=`{Utb)pV">
+                <field name="NUM">0</field>
+              </shadow>
+            </value>
+            <next>
+              <block type="control_ex" id=".(^/sPo%XT^2Ap~Dvnm@">
+                <field name="TYPE">true</field>
+                <field name="CLEAR_RUNNING">FALSE</field>
+                <value name="OID">
+                  <shadow type="field_oid" id="D9V2(LL,kj{:gF^=?BtA">
+                    <field name="oid">0_userdata.0.Wohnzimmer.Rollladen.working_down</field>
+                  </shadow>
+                </value>
+                <value name="VALUE">
+                  <shadow type="logic_boolean" id="M+w]z[b!9xFL,5;|FQY;">
+                    <field name="BOOL">FALSE</field>
+                  </shadow>
+                </value>
+                <value name="DELAY_MS">
+                  <shadow type="math_number" id="zHjF|,f4YH~we2e-0jC)">
+                    <field name="NUM">0</field>
+                  </shadow>
+                  <block type="math_arithmetic" id="U%3Pb:zMwe`.S|$sDF:]">
+                    <field name="OP">ADD</field>
+                    <value name="A">
+                      <shadow type="math_number" id="Bv6AfSB8vLi~Z0QNFT$0">
+                        <field name="NUM">1</field>
+                      </shadow>
+                      <block type="math_arithmetic" id="-y2(O[u:78:b`k9z$-^:">
+                        <field name="OP">MULTIPLY</field>
+                        <value name="A">
+                          <shadow type="math_number" id="|{ko}%fj,O^3{|h$Y;EV">
+                            <field name="NUM">1</field>
+                          </shadow>
+                          <block type="get_value" id="EIvog8`R#H;A0IL!W,w2">
+                            <field name="ATTR">val</field>
+                            <field name="OID">0_userdata.0.Wohnzimmer.Rollladen.Laufzeit_runter</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <shadow type="math_number" id="=MUi]Xd6yQTseZr/vCm8">
+                            <field name="NUM">100</field>
+                          </shadow>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <shadow type="math_number" id="NQSkwoz7iGGPO|qfxD{-">
+                        <field name="NUM">1000</field>
+                      </shadow>
+                    </value>
+                  </block>
+                </value>
+                <next>
+                  <block type="control" id=";ILaBAap#fR8)LyfmXOj">
+                    <mutation xmlns="http://www.w3.org/1999/xhtml" delay_input="false"></mutation>
+                    <field name="OID">0_userdata.0.Wohnzimmer.Rollladen.IST</field>
+                    <field name="WITH_DELAY">FALSE</field>
+                    <value name="VALUE">
+                      <block type="math_number" id="@*DyyLnSMA$Yu8ML%cq?">
+                        <field name="NUM">0</field>
+                      </block>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <statement name="ELSE">
+          <block type="variables_set" id=",yn%,{21pe/Vhz,vfcn9">
+            <field name="VAR" id="hHfoX~Hx3by}mzpH{{:6">Ist</field>
+            <value name="VALUE">
+              <block type="get_value" id="XhE4]bG_~%/9*J+7[}/g">
+                <field name="ATTR">val</field>
+                <field name="OID">0_userdata.0.Wohnzimmer.Rollladen.IST</field>
+              </block>
+            </value>
+            <next>
+              <block type="variables_set" id="Y*LJ]W}}.K3U~mnNK/]w">
+                <field name="VAR" id="2siPmyNP6bojOa0qJgx:">Diff</field>
+                <value name="VALUE">
+                  <block type="math_single" id="Q0lNu`4N5q*pg*dpaJ+W">
+                    <field name="OP">ABS</field>
+                    <value name="NUM">
+                      <shadow type="math_number" id="nF,BC7ldL`%NZ-zH.[Kf">
+                        <field name="NUM">9</field>
+                      </shadow>
+                      <block type="math_arithmetic" id="lza.uGMz`wP3aM^?4Kn8">
+                        <field name="OP">MINUS</field>
+                        <value name="A">
+                          <shadow type="math_number" id="qlqQ@vzKqL`IFg|U1-|;">
+                            <field name="NUM">1</field>
+                          </shadow>
+                          <block type="get_value" id="fjkp;-wshR9@3xlddiZ?">
+                            <field name="ATTR">val</field>
+                            <field name="OID">0_userdata.0.Wohnzimmer.Rollladen.SOLL</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <shadow type="math_number" id="[J5aag3Is$!$Z=NVv5Wm">
+                            <field name="NUM">1</field>
+                          </shadow>
+                          <block type="get_value" id=".Q-!Hw.$bmh};sCKTRZq">
+                            <field name="ATTR">val</field>
+                            <field name="OID">0_userdata.0.Wohnzimmer.Rollladen.IST</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <next>
+                  <block type="controls_if" id="=2faaxIH)VW6v~LsSTzT">
+                    <mutation elseif="1"></mutation>
+                    <value name="IF0">
+                      <block type="logic_compare" id="`|l}j_^KD!m4Rwd`ta6*">
+                        <field name="OP">GT</field>
+                        <value name="A">
+                          <block type="variables_get" id="k7B.K%q9@/G4-0=?eB35">
+                            <field name="VAR" id="rGohx9/zadfRb*=lO(I9">value</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="variables_get" id="mB08@J`uOL!;4Dzr4rnx">
+                            <field name="VAR" id="hHfoX~Hx3by}mzpH{{:6">Ist</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <statement name="DO0">
+                      <block type="variables_set" id="DvLE+Avb}ez:!G*fhBM8">
+                        <field name="VAR" id="B3I%l;MLd,1,G4r]XAv)">Verzögerung</field>
+                        <value name="VALUE">
+                          <block type="math_arithmetic" id="d0aG6#R.x+AgR_/NDDEG">
+                            <field name="OP">MULTIPLY</field>
+                            <value name="A">
+                              <shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number" id="pAih]=v*=O#.;~!h2E*m">
+                                <field name="NUM">1</field>
+                              </shadow>
+                              <block type="get_value" id="Pnj3dOI;aMSJ+Rw6O26u">
+                                <field name="ATTR">val</field>
+                                <field name="OID">0_userdata.0.Wohnzimmer.Rollladen.Laufzeit_hoch</field>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number" id="wS?BG?*69?wTs__-CA[=">
+                                <field name="NUM">1</field>
+                              </shadow>
+                              <block type="variables_get" id="uOXXg@U[XN/KToj8N49Y">
+                                <field name="VAR" id="2siPmyNP6bojOa0qJgx:">Diff</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="control_ex" id="fJg@GAt`J|A)EmoAWa7w">
+                            <field name="TYPE">true</field>
+                            <field name="CLEAR_RUNNING">TRUE</field>
+                            <value name="OID">
+                              <shadow type="field_oid" id="Jr#W;AF:5_/pWi|T8L0W">
+                                <field name="oid">0_userdata.0.Wohnzimmer.Rollladen.working_up</field>
+                              </shadow>
+                            </value>
+                            <value name="VALUE">
+                              <shadow type="logic_boolean" id="8v^(sE9JDH_/nxDrhW`?">
+                                <field name="BOOL">TRUE</field>
+                              </shadow>
+                            </value>
+                            <value name="DELAY_MS">
+                              <shadow type="math_number" id="b4@S`9YV._]lO7R/+Q|s">
+                                <field name="NUM">0</field>
+                              </shadow>
+                            </value>
+                            <next>
+                              <block type="control_ex" id="#ukmw4/4IR[|^KqF]TnP">
+                                <field name="TYPE">true</field>
+                                <field name="CLEAR_RUNNING">FALSE</field>
+                                <value name="OID">
+                                  <shadow type="field_oid" id="G?|d_[(ni)LT(i;:v+Z*">
+                                    <field name="oid">0_userdata.0.Wohnzimmer.Rollladen.working_up</field>
+                                  </shadow>
+                                </value>
+                                <value name="VALUE">
+                                  <shadow type="logic_boolean" id="o96kuMf-~4XjI3]uVl4W">
+                                    <field name="BOOL">FALSE</field>
+                                  </shadow>
+                                </value>
+                                <value name="DELAY_MS">
+                                  <shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number" id="xRj4zrn1|HpB^xgVOFrm">
+                                    <field name="NUM">0</field>
+                                  </shadow>
+                                  <block type="variables_get" id="Q;[bw`?AIyoco9B07*H|">
+                                    <field name="VAR" id="B3I%l;MLd,1,G4r]XAv)">Verzögerung</field>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="control" id="q,Z31N9,AZvB9c;9)_n^">
+                                    <mutation xmlns="http://www.w3.org/1999/xhtml" delay_input="false"></mutation>
+                                    <field name="OID">0_userdata.0.Wohnzimmer.Rollladen.IST</field>
+                                    <field name="WITH_DELAY">FALSE</field>
+                                    <value name="VALUE">
+                                      <block type="get_value" id="x.BkYu9`Lgbah3K?7~b2">
+                                        <field name="ATTR">val</field>
+                                        <field name="OID">0_userdata.0.Wohnzimmer.Rollladen.SOLL</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </statement>
+                    <value name="IF1">
+                      <block type="logic_compare" id="D#diUaGf;w74#zd-MjnO">
+                        <field name="OP">LT</field>
+                        <value name="A">
+                          <block type="variables_get" id="Qv3D8i|UuhD)auw)U6Yg">
+                            <field name="VAR" id="rGohx9/zadfRb*=lO(I9">value</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="variables_get" id="(=(:K+s:3NHkcz3m!Nj8">
+                            <field name="VAR" id="hHfoX~Hx3by}mzpH{{:6">Ist</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <statement name="DO1">
+                      <block type="variables_set" id="#/z38KqSTFF~i)AIYU#R">
+                        <field name="VAR" id="B3I%l;MLd,1,G4r]XAv)">Verzögerung</field>
+                        <value name="VALUE">
+                          <block type="math_arithmetic" id="bn[j]4X^gIm)J}!QJ.gg">
+                            <field name="OP">MULTIPLY</field>
+                            <value name="A">
+                              <shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number" id="pAih]=v*=O#.;~!h2E*m">
+                                <field name="NUM">1</field>
+                              </shadow>
+                              <block type="get_value" id="1zdAPjKI(NjvDOc(k?-9">
+                                <field name="ATTR">val</field>
+                                <field name="OID">0_userdata.0.Wohnzimmer.Rollladen.Laufzeit_runter</field>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number" id="wS?BG?*69?wTs__-CA[=">
+                                <field name="NUM">1</field>
+                              </shadow>
+                              <block type="variables_get" id="5LOf)+sgil^T~3@TznKf">
+                                <field name="VAR" id="2siPmyNP6bojOa0qJgx:">Diff</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="control_ex" id="#~aj!h??C6xz1(.;wwBC">
+                            <field name="TYPE">true</field>
+                            <field name="CLEAR_RUNNING">TRUE</field>
+                            <value name="OID">
+                              <shadow type="field_oid" id="/{XNzqqE!Kfyj!hO(.v|">
+                                <field name="oid">0_userdata.0.Wohnzimmer.Rollladen.working_down</field>
+                              </shadow>
+                            </value>
+                            <value name="VALUE">
+                              <shadow type="logic_boolean" id="NMv%mLStCkfRwPi-Z`Qc">
+                                <field name="BOOL">TRUE</field>
+                              </shadow>
+                            </value>
+                            <value name="DELAY_MS">
+                              <shadow type="math_number" id="xRj4zrn1|HpB^xgVOFrm">
+                                <field name="NUM">0</field>
+                              </shadow>
+                            </value>
+                            <next>
+                              <block type="control_ex" id="H2H`EN`E79DMF}0q_rV^">
+                                <field name="TYPE">true</field>
+                                <field name="CLEAR_RUNNING">FALSE</field>
+                                <value name="OID">
+                                  <shadow type="field_oid" id="z0.F?6.]v5z_:^z3.wfY">
+                                    <field name="oid">0_userdata.0.Wohnzimmer.Rollladen.working_down</field>
+                                  </shadow>
+                                </value>
+                                <value name="VALUE">
+                                  <shadow type="logic_boolean" id="BJ1KBfYk:1y)QdF2VGP@">
+                                    <field name="BOOL">FALSE</field>
+                                  </shadow>
+                                </value>
+                                <value name="DELAY_MS">
+                                  <shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number" id="xRj4zrn1|HpB^xgVOFrm">
+                                    <field name="NUM">0</field>
+                                  </shadow>
+                                  <block type="variables_get" id="u4:Uk5{fO[n2s0p]QzYg">
+                                    <field name="VAR" id="B3I%l;MLd,1,G4r]XAv)">Verzögerung</field>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="control" id="X{Op8XBc4*=I]WVz9g-0">
+                                    <mutation xmlns="http://www.w3.org/1999/xhtml" delay_input="false"></mutation>
+                                    <field name="OID">0_userdata.0.Wohnzimmer.Rollladen.IST</field>
+                                    <field name="WITH_DELAY">FALSE</field>
+                                    <value name="VALUE">
+                                      <block type="get_value" id="ee@Rj2ufjj5%iO1@ZpLB">
+                                        <field name="ATTR">val</field>
+                                        <field name="OID">0_userdata.0.Wohnzimmer.Rollladen.SOLL</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </statement>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </statement>
+    <next>
+      <block type="on_ext" id="#?mIG}W{i+,vI^ps*=bj">
+        <mutation xmlns="http://www.w3.org/1999/xhtml" items="2"></mutation>
+        <field name="CONDITION">ne</field>
+        <field name="ACK_CONDITION"></field>
+        <value name="OID0">
+          <shadow type="field_oid" id="g4Kj[0?KnD?ddJQP?g4x">
+            <field name="oid">0_userdata.0.Wohnzimmer.Rollladen.working_up</field>
+          </shadow>
+        </value>
+        <value name="OID1">
+          <shadow type="field_oid" id="zHYlG[*,JT9YC]Pe~Unn">
+            <field name="oid">0_userdata.0.Wohnzimmer.Rollladen.working_down</field>
+          </shadow>
+        </value>
+        <statement name="STATEMENT">
+          <block type="controls_if" id="XAv_BJnPJ?s@9x#N.`CW">
+            <mutation elseif="1" else="1"></mutation>
+            <value name="IF0">
+              <block type="logic_compare" id="waP,2jrxSPeSyj~Y]n=K">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block type="get_value" id="~oP;Y:jgbwEGNFVQY7.B">
+                    <field name="ATTR">val</field>
+                    <field name="OID">0_userdata.0.Wohnzimmer.Rollladen.working_up</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="logic_boolean" id="eFRYlLj1E-ycr0:L-_nC">
+                    <field name="BOOL">TRUE</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="control" id="I83:+s$Reegi6I7Z}B$I">
+                <mutation xmlns="http://www.w3.org/1999/xhtml" delay_input="false"></mutation>
+                <field name="OID">sonoff.0.rollladen.POWER1</field>
+                <field name="WITH_DELAY">FALSE</field>
+                <value name="VALUE">
+                  <block type="logic_boolean" id="Nv,Wc!R]`m4/aB7+K6%o">
+                    <field name="BOOL">TRUE</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="control" id="xRFND16s3$)wwwpCZShS">
+                    <mutation xmlns="http://www.w3.org/1999/xhtml" delay_input="false"></mutation>
+                    <field name="OID">sonoff.0.rollladen.POWER3</field>
+                    <field name="WITH_DELAY">FALSE</field>
+                    <value name="VALUE">
+                      <block type="logic_boolean" id="G=avGAh@nQz]tF+U4!ou">
+                        <field name="BOOL">TRUE</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="control" id="Zn)O%Jx27=)9K+MNZG#7">
+                        <mutation xmlns="http://www.w3.org/1999/xhtml" delay_input="true"></mutation>
+                        <field name="OID">sonoff.0.rollladen.POWER1</field>
+                        <field name="WITH_DELAY">TRUE</field>
+                        <field name="DELAY_MS">250</field>
+                        <field name="UNIT">ms</field>
+                        <field name="CLEAR_RUNNING">FALSE</field>
+                        <value name="VALUE">
+                          <block type="logic_boolean" id="..0fhI:NMdi[#`1,Oiup">
+                            <field name="BOOL">FALSE</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="control" id="~!au{K=c;:o^./v1w!57">
+                            <mutation xmlns="http://www.w3.org/1999/xhtml" delay_input="true"></mutation>
+                            <field name="OID">sonoff.0.rollladen.POWER3</field>
+                            <field name="WITH_DELAY">TRUE</field>
+                            <field name="DELAY_MS">250</field>
+                            <field name="UNIT">ms</field>
+                            <field name="CLEAR_RUNNING">FALSE</field>
+                            <value name="VALUE">
+                              <block type="logic_boolean" id="ctiy.YU2UAPGTnquC!H7">
+                                <field name="BOOL">FALSE</field>
+                              </block>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <value name="IF1">
+              <block type="logic_compare" id="kuNiSFQDYWl)`|?Za_L(">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block type="get_value" id="|N*z!V7#ldhlEA:_]aRk">
+                    <field name="ATTR">val</field>
+                    <field name="OID">0_userdata.0.Wohnzimmer.Rollladen.working_down</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="logic_boolean" id="suowc#G6{:USpDF+#V8A">
+                    <field name="BOOL">TRUE</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO1">
+              <block type="control" id="Adwxl[Wl;`L5F:E{}]JE">
+                <mutation xmlns="http://www.w3.org/1999/xhtml" delay_input="false"></mutation>
+                <field name="OID">sonoff.0.rollladen.POWER2</field>
+                <field name="WITH_DELAY">FALSE</field>
+                <value name="VALUE">
+                  <block type="logic_boolean" id="arE-PbOK-eT!|p)k}R`p">
+                    <field name="BOOL">TRUE</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="control" id="G`?}/;/]}y~0_Q%DtXO#">
+                    <mutation xmlns="http://www.w3.org/1999/xhtml" delay_input="false"></mutation>
+                    <field name="OID">sonoff.0.rollladen.POWER3</field>
+                    <field name="WITH_DELAY">FALSE</field>
+                    <value name="VALUE">
+                      <block type="logic_boolean" id="Pw9Ur]hz~@(wvj`SiyQ3">
+                        <field name="BOOL">TRUE</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="control" id="d0$5!D(ol%*{.AA58*%@">
+                        <mutation xmlns="http://www.w3.org/1999/xhtml" delay_input="true"></mutation>
+                        <field name="OID">sonoff.0.rollladen.POWER2</field>
+                        <field name="WITH_DELAY">TRUE</field>
+                        <field name="DELAY_MS">250</field>
+                        <field name="UNIT">ms</field>
+                        <field name="CLEAR_RUNNING">FALSE</field>
+                        <value name="VALUE">
+                          <block type="logic_boolean" id="e{Q}cSIbFf2h/!G%cjn.">
+                            <field name="BOOL">FALSE</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="control" id="XBXWi,nw(?.p%A[`Mg0s">
+                            <mutation xmlns="http://www.w3.org/1999/xhtml" delay_input="true"></mutation>
+                            <field name="OID">sonoff.0.rollladen.POWER3</field>
+                            <field name="WITH_DELAY">TRUE</field>
+                            <field name="DELAY_MS">250</field>
+                            <field name="UNIT">ms</field>
+                            <field name="CLEAR_RUNNING">FALSE</field>
+                            <value name="VALUE">
+                              <block type="logic_boolean" id="kXQ,L-d7jJ}|{vi!N3*=">
+                                <field name="BOOL">FALSE</field>
+                              </block>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <statement name="ELSE">
+              <block type="control" id="ZMKZS*3z,q9v;{d*8^fc">
+                <mutation xmlns="http://www.w3.org/1999/xhtml" delay_input="false"></mutation>
+                <field name="OID">sonoff.0.rollladen.POWER1</field>
+                <field name="WITH_DELAY">FALSE</field>
+                <value name="VALUE">
+                  <block type="logic_boolean" id="xZj5Xd~wb^+DQOXYRlMS">
+                    <field name="BOOL">TRUE</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="control" id="C,vckNct?~1zF8jNtUsb">
+                    <mutation xmlns="http://www.w3.org/1999/xhtml" delay_input="false"></mutation>
+                    <field name="OID">sonoff.0.rollladen.POWER2</field>
+                    <field name="WITH_DELAY">FALSE</field>
+                    <value name="VALUE">
+                      <block type="logic_boolean" id="sc9Zt@qPit+.dlugegBo">
+                        <field name="BOOL">TRUE</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="control" id="EyLEb~CIaXLF8$/B:w.u">
+                        <mutation xmlns="http://www.w3.org/1999/xhtml" delay_input="false"></mutation>
+                        <field name="OID">sonoff.0.rollladen.POWER3</field>
+                        <field name="WITH_DELAY">FALSE</field>
+                        <value name="VALUE">
+                          <block type="logic_boolean" id="q^;~;+:tkhS^j`+dY2)l">
+                            <field name="BOOL">TRUE</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="control" id="1BfU=wk!@bLp1$?mGhYy">
+                            <mutation xmlns="http://www.w3.org/1999/xhtml" delay_input="true"></mutation>
+                            <field name="OID">sonoff.0.rollladen.POWER1</field>
+                            <field name="WITH_DELAY">TRUE</field>
+                            <field name="DELAY_MS">250</field>
+                            <field name="UNIT">ms</field>
+                            <field name="CLEAR_RUNNING">FALSE</field>
+                            <value name="VALUE">
+                              <block type="logic_boolean" id="Y|f+#sU;h^|oBmUo3/)]">
+                                <field name="BOOL">FALSE</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="control" id="_6}[ZU*j+KLF5I:+:mFD">
+                                <mutation xmlns="http://www.w3.org/1999/xhtml" delay_input="true"></mutation>
+                                <field name="OID">sonoff.0.rollladen.POWER2</field>
+                                <field name="WITH_DELAY">TRUE</field>
+                                <field name="DELAY_MS">250</field>
+                                <field name="UNIT">ms</field>
+                                <field name="CLEAR_RUNNING">FALSE</field>
+                                <value name="VALUE">
+                                  <block type="logic_boolean" id="pGraYWAwnw`i$q*0-EZ;">
+                                    <field name="BOOL">FALSE</field>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="control" id="p_u6KX!Pp`gm?W2HP:*^">
+                                    <mutation xmlns="http://www.w3.org/1999/xhtml" delay_input="true"></mutation>
+                                    <field name="OID">sonoff.0.rollladen.POWER3</field>
+                                    <field name="WITH_DELAY">TRUE</field>
+                                    <field name="DELAY_MS">250</field>
+                                    <field name="UNIT">ms</field>
+                                    <field name="CLEAR_RUNNING">FALSE</field>
+                                    <value name="VALUE">
+                                      <block type="logic_boolean" id="arZPn!as!/6.{l/lDqLc">
+                                        <field name="BOOL">FALSE</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </statement>
+      </block>
+    </next>
+  </block>
+</xml>
+
+<xml xmlns="https://developers.google.com/blockly/xml">
+  <variables>
+    <variable id="hHfoX~Hx3by}mzpH{{:6">Ist</variable>
+    <variable id="2siPmyNP6bojOa0qJgx:">Diff</variable>
+    <variable id="B3I%l;MLd,1,G4r]XAv)">Verzögerung</variable>
+    <variable id="rGohx9/zadfRb*=lO(I9">value</variable>
+  </variables>
+  <block type="on" id="WFm[}xjn6.JW~ZQ|nKk9" x="-412" y="-437">
+    <field name="OID">0_userdata.0.Wohnzimmer.Rollladen.SOLL</field>
+    <field name="CONDITION">ne</field>
+    <field name="ACK_CONDITION"></field>
+    <statement name="STATEMENT">
+      <block type="controls_if" id="53Fn4aWlfLNumsd5?Ul-">
+        <mutation elseif="1" else="1"></mutation>
+        <value name="IF0">
+          <block type="logic_compare" id="pqOfnzXhzDWT6{jlv~O~">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="get_value" id=")|Qkp2ps|+S:I$yVsL]o">
+                <field name="ATTR">val</field>
+                <field name="OID">0_userdata.0.Wohnzimmer.Rollladen.SOLL</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="math_number" id="fY.%6HRJ!=)aZc,fbZ6g">
+                <field name="NUM">100</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO0">
+          <block type="control_ex" id="{10T[:8I{s_?m=(!x6Ze">
+            <field name="TYPE">true</field>
+            <field name="CLEAR_RUNNING">TRUE</field>
+            <value name="OID">
+              <shadow type="field_oid" id="CT]muU3kt,[gu0~SW2Y2">
+                <field name="oid">0_userdata.0.Wohnzimmer.Rollladen.working_up</field>
+              </shadow>
+            </value>
+            <value name="VALUE">
+              <shadow type="logic_boolean" id="d;[Z20[wX;rOq7~lBf}P">
+                <field name="BOOL">TRUE</field>
+              </shadow>
+            </value>
+            <value name="DELAY_MS">
+              <shadow type="math_number" id="6pK-^Jq88EAq9?BoZ!0J">
+                <field name="NUM">0</field>
+              </shadow>
+            </value>
+            <next>
+              <block type="control_ex" id="6No~iixw,isyXdE,o5.c">
+                <field name="TYPE">true</field>
+                <field name="CLEAR_RUNNING">FALSE</field>
+                <value name="OID">
+                  <shadow type="field_oid" id="08-4xQ-4|i{L3Z%@]Atg">
+                    <field name="oid">0_userdata.0.Wohnzimmer.Rollladen.working_up</field>
+                  </shadow>
+                </value>
+                <value name="VALUE">
+                  <shadow type="logic_boolean" id="c(@V@f;;1wFsUUD!m142">
+                    <field name="BOOL">FALSE</field>
+                  </shadow>
+                </value>
+                <value name="DELAY_MS">
+                  <shadow type="math_number">
+                    <field name="NUM">0</field>
+                  </shadow>
+                  <block type="math_arithmetic" id="[p6$)Yl6(pqh:jj3hcXR">
+                    <field name="OP">ADD</field>
+                    <value name="A">
+                      <shadow type="math_number">
+                        <field name="NUM">1</field>
+                      </shadow>
+                      <block type="math_arithmetic" id="yP{J`E/431CRVE#pl,N9">
+                        <field name="OP">MULTIPLY</field>
+                        <value name="A">
+                          <shadow type="math_number">
+                            <field name="NUM">1</field>
+                          </shadow>
+                          <block type="get_value" id="h[%x~:,SelQf^H)pylBD">
+                            <field name="ATTR">val</field>
+                            <field name="OID">0_userdata.0.Wohnzimmer.Rollladen.Laufzeit_hoch</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <shadow type="math_number" id="G?N_Qwu(E)gd9ZNy74(V">
+                            <field name="NUM">100</field>
+                          </shadow>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <shadow type="math_number" id="dMoU9t:mfU;snry!,H(7">
+                        <field name="NUM">1000</field>
+                      </shadow>
+                    </value>
+                  </block>
+                </value>
+                <next>
+                  <block type="control" id="()3I;WZ3066m%Xv*92w5">
+                    <mutation xmlns="http://www.w3.org/1999/xhtml" delay_input="false"></mutation>
+                    <field name="OID">0_userdata.0.Wohnzimmer.Rollladen.IST</field>
+                    <field name="WITH_DELAY">FALSE</field>
+                    <value name="VALUE">
+                      <block type="math_number" id="CW3T~{`1MZ=[^8RrP,Y]">
+                        <field name="NUM">100</field>
+                      </block>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <value name="IF1">
+          <block type="logic_compare" id="%`RtXec:I^n?76BdQO=N">
+            <field name="OP">EQ</field>
+            <value name="A">
+              <block type="get_value" id="@R5O9zjmB0:wLVuy!r?/">
+                <field name="ATTR">val</field>
+                <field name="OID">0_userdata.0.Wohnzimmer.Rollladen.SOLL</field>
+              </block>
+            </value>
+            <value name="B">
+              <block type="math_number" id="*txKOQ3pZp23hr1FB~@(">
+                <field name="NUM">0</field>
+              </block>
+            </value>
+          </block>
+        </value>
+        <statement name="DO1">
+          <block type="control_ex" id="R=p@M@Ap4GM9J7zY%GG^">
+            <field name="TYPE">true</field>
+            <field name="CLEAR_RUNNING">TRUE</field>
+            <value name="OID">
+              <shadow type="field_oid" id="q)%HcmW@cWfLt-ssDqY.">
+                <field name="oid">0_userdata.0.Wohnzimmer.Rollladen.working_down</field>
+              </shadow>
+            </value>
+            <value name="VALUE">
+              <shadow type="logic_boolean" id="O1eAOK*I|RK_AD_]ZA:9">
+                <field name="BOOL">TRUE</field>
+              </shadow>
+            </value>
+            <value name="DELAY_MS">
+              <shadow type="math_number" id="J9Tyml^Xdml=`{Utb)pV">
+                <field name="NUM">0</field>
+              </shadow>
+            </value>
+            <next>
+              <block type="control_ex" id=".(^/sPo%XT^2Ap~Dvnm@">
+                <field name="TYPE">true</field>
+                <field name="CLEAR_RUNNING">FALSE</field>
+                <value name="OID">
+                  <shadow type="field_oid" id="D9V2(LL,kj{:gF^=?BtA">
+                    <field name="oid">0_userdata.0.Wohnzimmer.Rollladen.working_down</field>
+                  </shadow>
+                </value>
+                <value name="VALUE">
+                  <shadow type="logic_boolean" id="M+w]z[b!9xFL,5;|FQY;">
+                    <field name="BOOL">FALSE</field>
+                  </shadow>
+                </value>
+                <value name="DELAY_MS">
+                  <shadow type="math_number" id="zHjF|,f4YH~we2e-0jC)">
+                    <field name="NUM">0</field>
+                  </shadow>
+                  <block type="math_arithmetic" id="U%3Pb:zMwe`.S|$sDF:]">
+                    <field name="OP">ADD</field>
+                    <value name="A">
+                      <shadow type="math_number" id="Bv6AfSB8vLi~Z0QNFT$0">
+                        <field name="NUM">1</field>
+                      </shadow>
+                      <block type="math_arithmetic" id="-y2(O[u:78:b`k9z$-^:">
+                        <field name="OP">MULTIPLY</field>
+                        <value name="A">
+                          <shadow type="math_number" id="|{ko}%fj,O^3{|h$Y;EV">
+                            <field name="NUM">1</field>
+                          </shadow>
+                          <block type="get_value" id="EIvog8`R#H;A0IL!W,w2">
+                            <field name="ATTR">val</field>
+                            <field name="OID">0_userdata.0.Wohnzimmer.Rollladen.Laufzeit_runter</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <shadow type="math_number" id="=MUi]Xd6yQTseZr/vCm8">
+                            <field name="NUM">100</field>
+                          </shadow>
+                        </value>
+                      </block>
+                    </value>
+                    <value name="B">
+                      <shadow type="math_number" id="NQSkwoz7iGGPO|qfxD{-">
+                        <field name="NUM">1000</field>
+                      </shadow>
+                    </value>
+                  </block>
+                </value>
+                <next>
+                  <block type="control" id=";ILaBAap#fR8)LyfmXOj">
+                    <mutation xmlns="http://www.w3.org/1999/xhtml" delay_input="false"></mutation>
+                    <field name="OID">0_userdata.0.Wohnzimmer.Rollladen.IST</field>
+                    <field name="WITH_DELAY">FALSE</field>
+                    <value name="VALUE">
+                      <block type="math_number" id="@*DyyLnSMA$Yu8ML%cq?">
+                        <field name="NUM">0</field>
+                      </block>
+                    </value>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+        <statement name="ELSE">
+          <block type="variables_set" id=",yn%,{21pe/Vhz,vfcn9">
+            <field name="VAR" id="hHfoX~Hx3by}mzpH{{:6">Ist</field>
+            <value name="VALUE">
+              <block type="get_value" id="XhE4]bG_~%/9*J+7[}/g">
+                <field name="ATTR">val</field>
+                <field name="OID">0_userdata.0.Wohnzimmer.Rollladen.IST</field>
+              </block>
+            </value>
+            <next>
+              <block type="variables_set" id="Y*LJ]W}}.K3U~mnNK/]w">
+                <field name="VAR" id="2siPmyNP6bojOa0qJgx:">Diff</field>
+                <value name="VALUE">
+                  <block type="math_single" id="Q0lNu`4N5q*pg*dpaJ+W">
+                    <field name="OP">ABS</field>
+                    <value name="NUM">
+                      <shadow type="math_number" id="nF,BC7ldL`%NZ-zH.[Kf">
+                        <field name="NUM">9</field>
+                      </shadow>
+                      <block type="math_arithmetic" id="lza.uGMz`wP3aM^?4Kn8">
+                        <field name="OP">MINUS</field>
+                        <value name="A">
+                          <shadow type="math_number" id="qlqQ@vzKqL`IFg|U1-|;">
+                            <field name="NUM">1</field>
+                          </shadow>
+                          <block type="get_value" id="fjkp;-wshR9@3xlddiZ?">
+                            <field name="ATTR">val</field>
+                            <field name="OID">0_userdata.0.Wohnzimmer.Rollladen.SOLL</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <shadow type="math_number" id="[J5aag3Is$!$Z=NVv5Wm">
+                            <field name="NUM">1</field>
+                          </shadow>
+                          <block type="get_value" id=".Q-!Hw.$bmh};sCKTRZq">
+                            <field name="ATTR">val</field>
+                            <field name="OID">0_userdata.0.Wohnzimmer.Rollladen.IST</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                  </block>
+                </value>
+                <next>
+                  <block type="controls_if" id="=2faaxIH)VW6v~LsSTzT">
+                    <mutation elseif="1"></mutation>
+                    <value name="IF0">
+                      <block type="logic_compare" id="`|l}j_^KD!m4Rwd`ta6*">
+                        <field name="OP">GT</field>
+                        <value name="A">
+                          <block type="variables_get" id="k7B.K%q9@/G4-0=?eB35">
+                            <field name="VAR" id="rGohx9/zadfRb*=lO(I9">value</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="variables_get" id="mB08@J`uOL!;4Dzr4rnx">
+                            <field name="VAR" id="hHfoX~Hx3by}mzpH{{:6">Ist</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <statement name="DO0">
+                      <block type="variables_set" id="DvLE+Avb}ez:!G*fhBM8">
+                        <field name="VAR" id="B3I%l;MLd,1,G4r]XAv)">Verzögerung</field>
+                        <value name="VALUE">
+                          <block type="math_arithmetic" id="d0aG6#R.x+AgR_/NDDEG">
+                            <field name="OP">MULTIPLY</field>
+                            <value name="A">
+                              <shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number" id="pAih]=v*=O#.;~!h2E*m">
+                                <field name="NUM">1</field>
+                              </shadow>
+                              <block type="get_value" id="Pnj3dOI;aMSJ+Rw6O26u">
+                                <field name="ATTR">val</field>
+                                <field name="OID">0_userdata.0.Wohnzimmer.Rollladen.Laufzeit_hoch</field>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number" id="wS?BG?*69?wTs__-CA[=">
+                                <field name="NUM">1</field>
+                              </shadow>
+                              <block type="variables_get" id="uOXXg@U[XN/KToj8N49Y">
+                                <field name="VAR" id="2siPmyNP6bojOa0qJgx:">Diff</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="control_ex" id="fJg@GAt`J|A)EmoAWa7w">
+                            <field name="TYPE">true</field>
+                            <field name="CLEAR_RUNNING">TRUE</field>
+                            <value name="OID">
+                              <shadow type="field_oid" id="Jr#W;AF:5_/pWi|T8L0W">
+                                <field name="oid">0_userdata.0.Wohnzimmer.Rollladen.working_up</field>
+                              </shadow>
+                            </value>
+                            <value name="VALUE">
+                              <shadow type="logic_boolean" id="8v^(sE9JDH_/nxDrhW`?">
+                                <field name="BOOL">TRUE</field>
+                              </shadow>
+                            </value>
+                            <value name="DELAY_MS">
+                              <shadow type="math_number" id="b4@S`9YV._]lO7R/+Q|s">
+                                <field name="NUM">0</field>
+                              </shadow>
+                            </value>
+                            <next>
+                              <block type="control_ex" id="#ukmw4/4IR[|^KqF]TnP">
+                                <field name="TYPE">true</field>
+                                <field name="CLEAR_RUNNING">FALSE</field>
+                                <value name="OID">
+                                  <shadow type="field_oid" id="G?|d_[(ni)LT(i;:v+Z*">
+                                    <field name="oid">0_userdata.0.Wohnzimmer.Rollladen.working_up</field>
+                                  </shadow>
+                                </value>
+                                <value name="VALUE">
+                                  <shadow type="logic_boolean" id="o96kuMf-~4XjI3]uVl4W">
+                                    <field name="BOOL">FALSE</field>
+                                  </shadow>
+                                </value>
+                                <value name="DELAY_MS">
+                                  <shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number" id="xRj4zrn1|HpB^xgVOFrm">
+                                    <field name="NUM">0</field>
+                                  </shadow>
+                                  <block type="variables_get" id="Q;[bw`?AIyoco9B07*H|">
+                                    <field name="VAR" id="B3I%l;MLd,1,G4r]XAv)">Verzögerung</field>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="control" id="q,Z31N9,AZvB9c;9)_n^">
+                                    <mutation xmlns="http://www.w3.org/1999/xhtml" delay_input="false"></mutation>
+                                    <field name="OID">0_userdata.0.Wohnzimmer.Rollladen.IST</field>
+                                    <field name="WITH_DELAY">FALSE</field>
+                                    <value name="VALUE">
+                                      <block type="get_value" id="x.BkYu9`Lgbah3K?7~b2">
+                                        <field name="ATTR">val</field>
+                                        <field name="OID">0_userdata.0.Wohnzimmer.Rollladen.SOLL</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </statement>
+                    <value name="IF1">
+                      <block type="logic_compare" id="D#diUaGf;w74#zd-MjnO">
+                        <field name="OP">LT</field>
+                        <value name="A">
+                          <block type="variables_get" id="Qv3D8i|UuhD)auw)U6Yg">
+                            <field name="VAR" id="rGohx9/zadfRb*=lO(I9">value</field>
+                          </block>
+                        </value>
+                        <value name="B">
+                          <block type="variables_get" id="(=(:K+s:3NHkcz3m!Nj8">
+                            <field name="VAR" id="hHfoX~Hx3by}mzpH{{:6">Ist</field>
+                          </block>
+                        </value>
+                      </block>
+                    </value>
+                    <statement name="DO1">
+                      <block type="variables_set" id="#/z38KqSTFF~i)AIYU#R">
+                        <field name="VAR" id="B3I%l;MLd,1,G4r]XAv)">Verzögerung</field>
+                        <value name="VALUE">
+                          <block type="math_arithmetic" id="bn[j]4X^gIm)J}!QJ.gg">
+                            <field name="OP">MULTIPLY</field>
+                            <value name="A">
+                              <shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number" id="pAih]=v*=O#.;~!h2E*m">
+                                <field name="NUM">1</field>
+                              </shadow>
+                              <block type="get_value" id="1zdAPjKI(NjvDOc(k?-9">
+                                <field name="ATTR">val</field>
+                                <field name="OID">0_userdata.0.Wohnzimmer.Rollladen.Laufzeit_runter</field>
+                              </block>
+                            </value>
+                            <value name="B">
+                              <shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number" id="wS?BG?*69?wTs__-CA[=">
+                                <field name="NUM">1</field>
+                              </shadow>
+                              <block type="variables_get" id="5LOf)+sgil^T~3@TznKf">
+                                <field name="VAR" id="2siPmyNP6bojOa0qJgx:">Diff</field>
+                              </block>
+                            </value>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="control_ex" id="#~aj!h??C6xz1(.;wwBC">
+                            <field name="TYPE">true</field>
+                            <field name="CLEAR_RUNNING">TRUE</field>
+                            <value name="OID">
+                              <shadow type="field_oid" id="/{XNzqqE!Kfyj!hO(.v|">
+                                <field name="oid">0_userdata.0.Wohnzimmer.Rollladen.working_down</field>
+                              </shadow>
+                            </value>
+                            <value name="VALUE">
+                              <shadow type="logic_boolean" id="NMv%mLStCkfRwPi-Z`Qc">
+                                <field name="BOOL">TRUE</field>
+                              </shadow>
+                            </value>
+                            <value name="DELAY_MS">
+                              <shadow type="math_number" id="xRj4zrn1|HpB^xgVOFrm">
+                                <field name="NUM">0</field>
+                              </shadow>
+                            </value>
+                            <next>
+                              <block type="control_ex" id="H2H`EN`E79DMF}0q_rV^">
+                                <field name="TYPE">true</field>
+                                <field name="CLEAR_RUNNING">FALSE</field>
+                                <value name="OID">
+                                  <shadow type="field_oid" id="z0.F?6.]v5z_:^z3.wfY">
+                                    <field name="oid">0_userdata.0.Wohnzimmer.Rollladen.working_down</field>
+                                  </shadow>
+                                </value>
+                                <value name="VALUE">
+                                  <shadow type="logic_boolean" id="BJ1KBfYk:1y)QdF2VGP@">
+                                    <field name="BOOL">FALSE</field>
+                                  </shadow>
+                                </value>
+                                <value name="DELAY_MS">
+                                  <shadow xmlns="http://www.w3.org/1999/xhtml" type="math_number" id="xRj4zrn1|HpB^xgVOFrm">
+                                    <field name="NUM">0</field>
+                                  </shadow>
+                                  <block type="variables_get" id="u4:Uk5{fO[n2s0p]QzYg">
+                                    <field name="VAR" id="B3I%l;MLd,1,G4r]XAv)">Verzögerung</field>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="control" id="X{Op8XBc4*=I]WVz9g-0">
+                                    <mutation xmlns="http://www.w3.org/1999/xhtml" delay_input="false"></mutation>
+                                    <field name="OID">0_userdata.0.Wohnzimmer.Rollladen.IST</field>
+                                    <field name="WITH_DELAY">FALSE</field>
+                                    <value name="VALUE">
+                                      <block type="get_value" id="ee@Rj2ufjj5%iO1@ZpLB">
+                                        <field name="ATTR">val</field>
+                                        <field name="OID">0_userdata.0.Wohnzimmer.Rollladen.SOLL</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </statement>
+                  </block>
+                </next>
+              </block>
+            </next>
+          </block>
+        </statement>
+      </block>
+    </statement>
+    <next>
+      <block type="on_ext" id="#?mIG}W{i+,vI^ps*=bj">
+        <mutation xmlns="http://www.w3.org/1999/xhtml" items="2"></mutation>
+        <field name="CONDITION">ne</field>
+        <field name="ACK_CONDITION"></field>
+        <value name="OID0">
+          <shadow type="field_oid" id="g4Kj[0?KnD?ddJQP?g4x">
+            <field name="oid">0_userdata.0.Wohnzimmer.Rollladen.working_up</field>
+          </shadow>
+        </value>
+        <value name="OID1">
+          <shadow type="field_oid" id="zHYlG[*,JT9YC]Pe~Unn">
+            <field name="oid">0_userdata.0.Wohnzimmer.Rollladen.working_down</field>
+          </shadow>
+        </value>
+        <statement name="STATEMENT">
+          <block type="controls_if" id="XAv_BJnPJ?s@9x#N.`CW">
+            <mutation elseif="1" else="1"></mutation>
+            <value name="IF0">
+              <block type="logic_compare" id="waP,2jrxSPeSyj~Y]n=K">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block type="get_value" id="~oP;Y:jgbwEGNFVQY7.B">
+                    <field name="ATTR">val</field>
+                    <field name="OID">0_userdata.0.Wohnzimmer.Rollladen.working_up</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="logic_boolean" id="eFRYlLj1E-ycr0:L-_nC">
+                    <field name="BOOL">TRUE</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO0">
+              <block type="control" id="I83:+s$Reegi6I7Z}B$I">
+                <mutation xmlns="http://www.w3.org/1999/xhtml" delay_input="false"></mutation>
+                <field name="OID">sonoff.0.rollladen.POWER1</field>
+                <field name="WITH_DELAY">FALSE</field>
+                <value name="VALUE">
+                  <block type="logic_boolean" id="Nv,Wc!R]`m4/aB7+K6%o">
+                    <field name="BOOL">TRUE</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="control" id="xRFND16s3$)wwwpCZShS">
+                    <mutation xmlns="http://www.w3.org/1999/xhtml" delay_input="false"></mutation>
+                    <field name="OID">sonoff.0.rollladen.POWER3</field>
+                    <field name="WITH_DELAY">FALSE</field>
+                    <value name="VALUE">
+                      <block type="logic_boolean" id="G=avGAh@nQz]tF+U4!ou">
+                        <field name="BOOL">TRUE</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="control" id="Zn)O%Jx27=)9K+MNZG#7">
+                        <mutation xmlns="http://www.w3.org/1999/xhtml" delay_input="true"></mutation>
+                        <field name="OID">sonoff.0.rollladen.POWER1</field>
+                        <field name="WITH_DELAY">TRUE</field>
+                        <field name="DELAY_MS">250</field>
+                        <field name="UNIT">ms</field>
+                        <field name="CLEAR_RUNNING">FALSE</field>
+                        <value name="VALUE">
+                          <block type="logic_boolean" id="..0fhI:NMdi[#`1,Oiup">
+                            <field name="BOOL">FALSE</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="control" id="~!au{K=c;:o^./v1w!57">
+                            <mutation xmlns="http://www.w3.org/1999/xhtml" delay_input="true"></mutation>
+                            <field name="OID">sonoff.0.rollladen.POWER3</field>
+                            <field name="WITH_DELAY">TRUE</field>
+                            <field name="DELAY_MS">250</field>
+                            <field name="UNIT">ms</field>
+                            <field name="CLEAR_RUNNING">FALSE</field>
+                            <value name="VALUE">
+                              <block type="logic_boolean" id="ctiy.YU2UAPGTnquC!H7">
+                                <field name="BOOL">FALSE</field>
+                              </block>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <value name="IF1">
+              <block type="logic_compare" id="kuNiSFQDYWl)`|?Za_L(">
+                <field name="OP">EQ</field>
+                <value name="A">
+                  <block type="get_value" id="|N*z!V7#ldhlEA:_]aRk">
+                    <field name="ATTR">val</field>
+                    <field name="OID">0_userdata.0.Wohnzimmer.Rollladen.working_down</field>
+                  </block>
+                </value>
+                <value name="B">
+                  <block type="logic_boolean" id="suowc#G6{:USpDF+#V8A">
+                    <field name="BOOL">TRUE</field>
+                  </block>
+                </value>
+              </block>
+            </value>
+            <statement name="DO1">
+              <block type="control" id="Adwxl[Wl;`L5F:E{}]JE">
+                <mutation xmlns="http://www.w3.org/1999/xhtml" delay_input="false"></mutation>
+                <field name="OID">sonoff.0.rollladen.POWER2</field>
+                <field name="WITH_DELAY">FALSE</field>
+                <value name="VALUE">
+                  <block type="logic_boolean" id="arE-PbOK-eT!|p)k}R`p">
+                    <field name="BOOL">TRUE</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="control" id="G`?}/;/]}y~0_Q%DtXO#">
+                    <mutation xmlns="http://www.w3.org/1999/xhtml" delay_input="false"></mutation>
+                    <field name="OID">sonoff.0.rollladen.POWER3</field>
+                    <field name="WITH_DELAY">FALSE</field>
+                    <value name="VALUE">
+                      <block type="logic_boolean" id="Pw9Ur]hz~@(wvj`SiyQ3">
+                        <field name="BOOL">TRUE</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="control" id="d0$5!D(ol%*{.AA58*%@">
+                        <mutation xmlns="http://www.w3.org/1999/xhtml" delay_input="true"></mutation>
+                        <field name="OID">sonoff.0.rollladen.POWER2</field>
+                        <field name="WITH_DELAY">TRUE</field>
+                        <field name="DELAY_MS">250</field>
+                        <field name="UNIT">ms</field>
+                        <field name="CLEAR_RUNNING">FALSE</field>
+                        <value name="VALUE">
+                          <block type="logic_boolean" id="e{Q}cSIbFf2h/!G%cjn.">
+                            <field name="BOOL">FALSE</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="control" id="XBXWi,nw(?.p%A[`Mg0s">
+                            <mutation xmlns="http://www.w3.org/1999/xhtml" delay_input="true"></mutation>
+                            <field name="OID">sonoff.0.rollladen.POWER3</field>
+                            <field name="WITH_DELAY">TRUE</field>
+                            <field name="DELAY_MS">250</field>
+                            <field name="UNIT">ms</field>
+                            <field name="CLEAR_RUNNING">FALSE</field>
+                            <value name="VALUE">
+                              <block type="logic_boolean" id="kXQ,L-d7jJ}|{vi!N3*=">
+                                <field name="BOOL">FALSE</field>
+                              </block>
+                            </value>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+            <statement name="ELSE">
+              <block type="control" id="ZMKZS*3z,q9v;{d*8^fc">
+                <mutation xmlns="http://www.w3.org/1999/xhtml" delay_input="false"></mutation>
+                <field name="OID">sonoff.0.rollladen.POWER1</field>
+                <field name="WITH_DELAY">FALSE</field>
+                <value name="VALUE">
+                  <block type="logic_boolean" id="xZj5Xd~wb^+DQOXYRlMS">
+                    <field name="BOOL">TRUE</field>
+                  </block>
+                </value>
+                <next>
+                  <block type="control" id="C,vckNct?~1zF8jNtUsb">
+                    <mutation xmlns="http://www.w3.org/1999/xhtml" delay_input="false"></mutation>
+                    <field name="OID">sonoff.0.rollladen.POWER2</field>
+                    <field name="WITH_DELAY">FALSE</field>
+                    <value name="VALUE">
+                      <block type="logic_boolean" id="sc9Zt@qPit+.dlugegBo">
+                        <field name="BOOL">TRUE</field>
+                      </block>
+                    </value>
+                    <next>
+                      <block type="control" id="EyLEb~CIaXLF8$/B:w.u">
+                        <mutation xmlns="http://www.w3.org/1999/xhtml" delay_input="false"></mutation>
+                        <field name="OID">sonoff.0.rollladen.POWER3</field>
+                        <field name="WITH_DELAY">FALSE</field>
+                        <value name="VALUE">
+                          <block type="logic_boolean" id="q^;~;+:tkhS^j`+dY2)l">
+                            <field name="BOOL">TRUE</field>
+                          </block>
+                        </value>
+                        <next>
+                          <block type="control" id="1BfU=wk!@bLp1$?mGhYy">
+                            <mutation xmlns="http://www.w3.org/1999/xhtml" delay_input="true"></mutation>
+                            <field name="OID">sonoff.0.rollladen.POWER1</field>
+                            <field name="WITH_DELAY">TRUE</field>
+                            <field name="DELAY_MS">250</field>
+                            <field name="UNIT">ms</field>
+                            <field name="CLEAR_RUNNING">FALSE</field>
+                            <value name="VALUE">
+                              <block type="logic_boolean" id="Y|f+#sU;h^|oBmUo3/)]">
+                                <field name="BOOL">FALSE</field>
+                              </block>
+                            </value>
+                            <next>
+                              <block type="control" id="_6}[ZU*j+KLF5I:+:mFD">
+                                <mutation xmlns="http://www.w3.org/1999/xhtml" delay_input="true"></mutation>
+                                <field name="OID">sonoff.0.rollladen.POWER2</field>
+                                <field name="WITH_DELAY">TRUE</field>
+                                <field name="DELAY_MS">250</field>
+                                <field name="UNIT">ms</field>
+                                <field name="CLEAR_RUNNING">FALSE</field>
+                                <value name="VALUE">
+                                  <block type="logic_boolean" id="pGraYWAwnw`i$q*0-EZ;">
+                                    <field name="BOOL">FALSE</field>
+                                  </block>
+                                </value>
+                                <next>
+                                  <block type="control" id="p_u6KX!Pp`gm?W2HP:*^">
+                                    <mutation xmlns="http://www.w3.org/1999/xhtml" delay_input="true"></mutation>
+                                    <field name="OID">sonoff.0.rollladen.POWER3</field>
+                                    <field name="WITH_DELAY">TRUE</field>
+                                    <field name="DELAY_MS">250</field>
+                                    <field name="UNIT">ms</field>
+                                    <field name="CLEAR_RUNNING">FALSE</field>
+                                    <value name="VALUE">
+                                      <block type="logic_boolean" id="arZPn!as!/6.{l/lDqLc">
+                                        <field name="BOOL">FALSE</field>
+                                      </block>
+                                    </value>
+                                  </block>
+                                </next>
+                              </block>
+                            </next>
+                          </block>
+                        </next>
+                      </block>
+                    </next>
+                  </block>
+                </next>
+              </block>
+            </statement>
+          </block>
+        </statement>
+      </block>
+    </next>
+  </block>
+</xml>
